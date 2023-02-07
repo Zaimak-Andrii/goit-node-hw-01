@@ -25,7 +25,7 @@ type InvokeType = {
 function invokeAction({ action, id, name, email, phone }: InvokeType): void {
   switch (action) {
     case 'list':
-      listContacts();
+      listContacts().then(console.log);
       break;
 
     case 'get':
